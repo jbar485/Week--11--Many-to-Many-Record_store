@@ -1,5 +1,18 @@
 <h1><%= @album.name %></h1>
 <h3><%= @album.genre %></h3>
+<% if @album.artists.any? %>
+  <h5> The artists </h5>
+
+  <ul>
+  <% @album.artists.each do |artist| %>
+      <li>
+        <p> <%= artist.name %> </p>
+      </li>
+  <% end %>
+</ul>
+<% else %>
+
+<% end %>
 
 <% if @album.songs.any? %>
   <h4>Here are the songs for this album:</h4>

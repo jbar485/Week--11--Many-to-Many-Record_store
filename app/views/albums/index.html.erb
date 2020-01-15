@@ -10,5 +10,23 @@
   <p>There are no albums yet.</p>
 <% end %>
 
+<p> Rock ones go here </p>
+
+
+
+<% @albums.rock.each do |rockAlbum| %>
+<ul>
+  <li>
+    <%= rockAlbum.name %>
+  </li>
+</ul>
+<% end %>
+
+
+<!-- <p> This one has the most songs </p>
+< %= @albums.most_songs.first.name %> -->
+<!--
+<p> This is a hardcoded search for "supreme" </p>
+< %= @albums.search("Supreme").first.name %> -->
 
 <p><%= link_to "Create new album", new_album_path %></p>
